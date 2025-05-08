@@ -2,9 +2,6 @@ import { Routes, Route, Link } from 'react-router-dom';
 import {
   KeshoAngavuPageV5,
   KeshoAngavuPageV4,
-  KeshoAngavuPageV3,
-  KeshoAngavuPageV2,
-  KeshoAngavuPageV1
 } from './pages';
 
 
