@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ArrowRight, CheckCircle, Globe, Zap, ChevronRight, Users, Building, Award, Menu } from "lucide-react"
 
 // Components
 const Button = ({ children, variant = 'default', size = 'default', className = '', ...props }) => {
@@ -87,68 +88,103 @@ const TabsContent = ({ value, children, activeTab }) => (
   activeTab === value ? <div>{children}</div> : null
 );
 
-// Lucide Icons (simplified for brevity)
-const ArrowRight = () => <svg className="h-4 w-4" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>;
-const CheckCircle = () => <svg className="h-5 w-5" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>;
-const Globe = () => <svg className="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10m0-20C9.3 2 6.7 3.3 5 5.6"/></svg>;
 const Mail = () => <svg className="h-5 w-5" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>;
 const MapPin = () => <svg className="h-5 w-5" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>;
 const Phone = () => <svg className="h-5 w-5" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>;
-const ChevronRight = () => <svg className="h-4 w-4" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M9 5l7 7-7 7"/></svg>;
-const Users = () => <svg className="h-8 w-8" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/></svg>;
-const Building = () => <svg className="h-8 w-8" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M3 21h18M5 3h14v18H5z"/><path d="M9 7h2v2H9zm4 0h2v2h-2zm-4 4h2v2H9zm4 0h2v2h-2zm-4 4h2v2H9zm4 0h2v2h-2z"/></svg>;
-const Award = () => <svg className="h-8 w-8" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>;
 
 function KeshoAngavuPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
   return (
-    <div className="flex min-h-screen flex-col bg-gradient-to-b from-white to-gray-100">
+   <div className="flex min-h-screen flex-col bg-gradient-to-b from-background to-muted/30">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2 font-bold text-xl">
-            <Globe className="h-6 w-6 text-blue-600" />
-            <span className="gradient-text">Kesho Angavu</span>
+            <Globe className="h-6 w-6 text-primary" />
+            <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text">Kesho Angavu</span>
           </div>
           <nav className="hidden md:flex gap-6">
-            <a href="#about" className="text-sm font-medium hover:text-blue-600">About</a>
-            <a href="#services" className="text-sm font-medium hover:text-blue-600">Programs</a>
-            <a href="#team" className="text-sm font-medium hover:text-blue-600">Our Team</a>
-            <a href="#testimonials" className="text-sm font-medium hover:text-blue-600">Impact</a>
-            <a href="#contact" className="text-sm font-medium hover:text-blue-600">Contact</a>
+            <a href="#about" className="text-sm font-medium transition-colors hover:text-primary">
+              About
+            </a>
+            <a href="#services" className="text-sm font-medium transition-colors hover:text-primary">
+              Services
+            </a>
+            <a href="#team" className="text-sm font-medium transition-colors hover:text-primary">
+              Our Team
+            </a>
+            <a href="#testimonials" className="text-sm font-medium transition-colors hover:text-primary">
+              Testimonials
+            </a>
+            <a href="#contact" className="text-sm font-medium transition-colors hover:text-primary">
+              Contact
+            </a>
           </nav>
-          <Button className="bg-blue-600 hover:bg-blue-700">
-            Get Involved
-            <ChevronRight className="ml-2 h-4 w-4" />
-          </Button>
+          <div className="flex items-center gap-4">
+            <Button className="shadow-lg shadow-primary/20 transition-all hover:shadow-primary/40 hidden md:flex">
+              Get Started
+              <ChevronRight className="ml-2 h-4 w-4" />
+            </Button>
+            <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+              <Menu className="h-6 w-6" />
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background border-b">
+            <div className="container py-4 space-y-3">
+              <a href="#about" className="block py-2 text-sm font-medium hover:text-primary">
+                About
+              </a>
+              <a href="#services" className="block py-2 text-sm font-medium hover:text-primary">
+                Services
+              </a>
+              <a href="#team" className="block py-2 text-sm font-medium hover:text-primary">
+                Our Team
+              </a>
+              <a href="#testimonials" className="block py-2 text-sm font-medium hover:text-primary">
+                Testimonials
+              </a>
+              <a href="#contact" className="block py-2 text-sm font-medium hover:text-primary">
+                Contact
+              </a>
+              <Button className="w-full mt-2">
+                Get Started
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        )}
       </header>
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-gray-50 to-white">
-          <div className="container mx-auto px-4">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-muted/50 to-background">
+          <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-6">
-                <Badge variant="secondary">Empowering Youth</Badge>
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none gradient-text">
+                <Badge className="px-3 py-1 text-sm" variant="secondary">Empowering Youth</Badge>
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
                   Building a Brighter Tomorrow for Tanzanian Youth
-                </h1>
-                <p className="max-w-[600px] text-gray-600 md:text-xl">
+                 </h1>
+                <p className="max-w-[600px] text-muted-foreground md:text-xl">
                   Kesho Angavu empowers out-of-school youth through skills training, health education, and economic opportunities to create sustainable futures.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                  <Button size="lg" className="shadow-lg shadow-primary/20 transition-all hover:shadow-primary/40">
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                  <Button variant="outline" size="lg" className="border-2 hover:bg-gray-100">
+                  <Button variant="outline" size="lg" className="border-2 transition-all hover:bg-muted">
                     Support Us
                   </Button>
                 </div>
               </div>
               <div className="flex justify-center">
                 <div className="relative">
-                  <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-blue-600 to-blue-300 opacity-30 blur-xl"></div>
+                  <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-primary to-primary/50 opacity-30 blur-xl"></div>
                   <img
                     src="https://via.placeholder.com/550"
                     width={550}
