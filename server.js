@@ -1,19 +1,28 @@
-const express = require('express');
-const path = require('path');
-const app = express();
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import fs from 'fs';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const app = express();
 const buildPath = path.join(__dirname, 'dist');
 
-// Serve static files
+// Verify build directory exists
+if (!fs.existsSync(buildPath)) {
+  console.error('Build directory missing! Run "npm run build" first');
+  process.exit(1);
+}
+
 app.use(express.static(buildPath));
 
-// Handle all routes
 app.get('*', (req, res) => {
   res.sendFile(path.join(buildPath, 'index.html'));
 });
 
-// Listen on all network interfaces
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on http://0.0.0.0:${PORT}`);
 });
