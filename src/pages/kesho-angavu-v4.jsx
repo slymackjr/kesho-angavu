@@ -378,7 +378,7 @@ function KeshoAngavuPage() {
               <Card className="group hover:border-blue-500 hover:shadow-xl transition-all">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200">
-                    <Users className="h-6 w-6" />
+                    <Users className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold">Infrastructure & Migration</h3>
