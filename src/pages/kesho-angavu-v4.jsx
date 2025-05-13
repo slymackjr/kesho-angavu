@@ -21,7 +21,7 @@ const Button = ({ children, variant = 'default', size = 'default', className = '
 };
 
 const Card = ({ children, className = '', ...props }) => (
-  <div className={`rounded-xl border bg-white shadow-sm ${className}`} {...props}>{children}</div>
+  <div className={`rounded-xl bg-white shadow-sm ${className}`} {...props}>{children}</div>
 );
 
 const CardHeader = ({ children, className = '' }) => (
@@ -234,7 +234,7 @@ function KeshoAngavuPage() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <Badge variant="outline">About Us</Badge>
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight gradient-text">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
                 Our Mission
               </h2>
               <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed">
@@ -243,18 +243,18 @@ function KeshoAngavuPage() {
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="relative group">
-                <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-blue-600 to-blue-300 opacity-30 blur-xl group-hover:opacity-40 transition-all"></div>
+                <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-primary to-primary/50 opacity-30 blur-xl group-hover:opacity-40 transition-all"></div>
                 <img
                   src="https://via.placeholder.com/400"
                   width={400}
                   height={400}
                   alt="Youth Center"
-                  className="relative mx-auto aspect-video rounded-xl object-cover shadow-xl"
+                  className="relative mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last shadow-xl"
                 />
               </div>
               <div className="flex flex-col justify-center space-y-6">
-                <Tabs defaultValue="vision">
-                  <TabsList>
+                <Tabs defaultValue="vision" className="w-full">
+                  <TabsList className="grid w-full grid-cols-3">
                     <TabsTrigger value="vision">Vision</TabsTrigger>
                     <TabsTrigger value="mission">Mission</TabsTrigger>
                     <TabsTrigger value="values">Values</TabsTrigger>
@@ -299,7 +299,7 @@ function KeshoAngavuPage() {
         </section>
 
         {/* Programs Section */}
-        <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+        <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <Badge variant="outline">Our Programs</Badge>
@@ -483,7 +483,7 @@ function KeshoAngavuPage() {
               </p>
             </div>
             <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-3">
-              <Card className="bg-white/60 border-2 hover:border-blue-200 transition-all">
+              <Card className="bg-white/60 hover:border-blue-200 transition-all">
                 <CardHeader>
                   <div className="flex items-center gap-4">
                     <div className="relative h-16 w-16">
@@ -512,7 +512,7 @@ function KeshoAngavuPage() {
                   </div>
                 </CardContent>
               </Card>
-              <Card className="bg-white/60 border-2 hover:border-blue-200 transition-all">
+              <Card className="bg-white/60 hover:border-blue-200 transition-all">
                 <CardHeader>
                   <div className="flex items-center gap-4">
                     <div className="relative h-16 w-16">
@@ -541,7 +541,7 @@ function KeshoAngavuPage() {
                   </div>
                 </CardContent>
               </Card>
-              <Card className="bg-white/60 border-2 hover:border-blue-200 transition-all">
+              <Card className="bg-white/60 hover:border-blue-200 transition-all">
                 <CardHeader>
                   <div className="flex items-center gap-4">
                     <div className="relative h-16 w-16">
@@ -588,7 +588,7 @@ function KeshoAngavuPage() {
             </div>
             <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-2">
               <div className="space-y-6">
-                <div className="rounded-xl border-2 p-6 bg-white/60">
+                <div className="rounded-xl border p-6 bg-white/60 shadow-lg border-gray-200">
                   <h3 className="text-xl font-bold mb-4">Contact Information</h3>
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
@@ -626,7 +626,7 @@ function KeshoAngavuPage() {
                   ></iframe>
                 </div>
               </div>
-              <div className="rounded-xl border-2 p-6 bg-white/60">
+              <div className="rounded-xl border p-6 bg-white/60 shadow-lg border-gray-200">
                 <h3 className="text-xl font-bold mb-4">Send Us a Message</h3>
                 <div className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
@@ -676,7 +676,7 @@ function KeshoAngavuPage() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full border-t bg-white/95 backdrop-blur">
+      <footer className="w-full border-t bg-white/95 backdrop-blur border-gray-200">
         <div className="container mx-auto px-4 py-10">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="space-y-4">
@@ -714,7 +714,7 @@ function KeshoAngavuPage() {
               </ul>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t">
+          <div className="mt-8 pt-8 border-t border-gray-200">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-center text-sm text-gray-600">
                 © {new Date().getFullYear()} TUCASA MUHAS. All rights reserved.
