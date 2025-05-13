@@ -2,7 +2,6 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import fs from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -10,15 +9,11 @@ const __dirname = dirname(__filename);
 const app = express();
 const buildPath = path.join(__dirname, 'dist');
 
-// Verify build directory exists
-if (!fs.existsSync(buildPath)) {
-  console.error('Build directory missing! Run "npm run build" first');
-  process.exit(1);
-}
-
+// Serve static files
 app.use(express.static(buildPath));
 
-app.get('*', (req, res) => {
+// Handle all routes - simplified syntax
+app.get('*', (_, res) => {
   res.sendFile(path.join(buildPath, 'index.html'));
 });
 
