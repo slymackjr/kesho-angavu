@@ -10,6 +10,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(buildPath, 'index.html'));
 });
 
-const PORT = process.env.PORT || 5173;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
 });
