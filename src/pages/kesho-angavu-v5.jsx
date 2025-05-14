@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle, Globe, Zap, ChevronRight, Users, Building, Award, Menu } from "lucide-react";
 import { AnimatedImageGallery,HeroImageSphere } from '@/elements';
+import { photo1, photo2 } from '@/assets';
 
 // Components (unchanged for brevity, but ensure they are responsive)
 const Button = ({ children, variant = 'default', size = 'default', className = '', ...props }) => {
@@ -436,7 +437,7 @@ function KeshoAngavuPage() {
                       </div>
                     </div>
                     <img
-                      src="https://via.placeholder.com/300"
+                      src={photo2}
                       alt="Daniel J Magomele"
                       className="object-cover w-full h-full rounded-xl transition-transform duration-300 group-hover:scale-105"
                     />
@@ -460,7 +461,7 @@ function KeshoAngavuPage() {
                       </div>
                     </div>
                     <img
-                      src="https://via.placeholder.com/300"
+                      src={photo1}
                       alt="Ezekiel Ndege"
                       className="object-cover w-full h-full rounded-xl transition-transform duration-300 group-hover:scale-105"
                     />
