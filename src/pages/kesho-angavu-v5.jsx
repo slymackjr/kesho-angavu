@@ -1,6 +1,7 @@
 // export default KeshoAngavuPage;
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle, Globe, Zap, ChevronRight, Users, Building, Award, Menu } from "lucide-react";
+import { AnimatedImageGallery,HeroImageSphere } from '@/elements';
 
 // Components (unchanged for brevity, but ensure they are responsive)
 const Button = ({ children, variant = 'default', size = 'default', className = '', ...props }) => {
@@ -197,14 +198,15 @@ function KeshoAngavuPage() {
               </div>
               {/* Image Section */}
               <div className="flex justify-center mt-6 lg:mt-0">
-                <div className="relative w-full max-w-[90%] sm:max-w-[500px] aspect-[1/1]">
+                {/* <div className="relative w-full max-w-[90%] sm:max-w-[500px] aspect-[1/1]">
                   <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-primary to-primary/50 opacity-30 blur-xl"></div>
                   <img
                     src="https://via.placeholder.com/550"
                     alt="Youth Training"
                     className="relative rounded-xl object-cover w-full h-full shadow-2xl"
                   />
-                </div>
+                </div> */}
+                <HeroImageSphere/>
               </div>
             </div>
 
@@ -254,14 +256,15 @@ function KeshoAngavuPage() {
               </p>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-8 sm:py-12 lg:grid-cols-2 lg:gap-12">
-            <div className="relative group w-full aspect-[4/3]">
+            {/* <div className="relative group w-full aspect-[4/3]">
               <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-primary to-primary/50 opacity-30 blur-xl group-hover:opacity-40 transition-all"></div>
               <img
                 src="https://via.placeholder.com/400"
                 alt="Youth Center"
                 className="relative w-full h-full rounded-xl object-cover shadow-xl"
               />
-            </div>
+            </div> */}
+              <AnimatedImageGallery />
 
               <div className="flex flex-col justify-center space-y-6">
                 <Tabs defaultValue="vision" className="w-full">
