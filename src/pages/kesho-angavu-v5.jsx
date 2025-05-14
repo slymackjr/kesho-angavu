@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle, Globe, Zap, ChevronRight, Users, Building, Award, Menu } from "lucide-react";
 import { AnimatedImageGallery,HeroImageSphere } from '@/elements';
-import { photo1, photo2 } from '@/assets';
+import { photo1, photo2, user1, user2, user3 } from '@/assets';
 
 // Components (unchanged for brevity, but ensure they are responsive)
 const Button = ({ children, variant = 'default', size = 'default', className = '', ...props }) => {
@@ -500,7 +500,7 @@ function KeshoAngavuPage() {
                     <div className="relative h-12 w-12 sm:h-16 sm:w-16">
                       <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-blue-600 to-blue-300 opacity-30 blur-sm"></div>
                       <img
-                        src="https://via.placeholder.com/60"
+                        src={user1}
                         alt="Amina"
                         className="relative rounded-full h-full w-full object-cover"
                       />
@@ -527,7 +527,7 @@ function KeshoAngavuPage() {
                     <div className="relative h-12 w-12 sm:h-16 sm:w-16">
                       <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-blue-600 to-blue-300 opacity-30 blur-sm"></div>
                       <img
-                        src="https://via.placeholder.com/60"
+                        src={user2}
                         alt="Juma"
                         className="relative rounded-full h-full w-full object-cover"
                       />
@@ -554,7 +554,7 @@ function KeshoAngavuPage() {
                     <div className="relative h-12 w-12 sm:h-16 sm:w-16">
                       <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-blue-600 to-blue-300 opacity-30 blur-sm"></div>
                       <img
-                        src="https://via.placeholder.com/60"
+                        src={user3}
                         alt="Fatuma"
                         className="relative rounded-full h-full w-full object-cover"
                       />
