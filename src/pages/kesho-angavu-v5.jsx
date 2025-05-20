@@ -1,7 +1,7 @@
 // export default KeshoAngavuPage;
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle, Globe, Zap, ChevronRight, Users, Building, Award, Menu } from "lucide-react";
-import { AnimatedImageGallery,HeroImageSphere } from '@/elements';
+import { AnimatedImageGallery,ContactForm,HeroImageSphere } from '@/elements';
 import { photo1, photo2, user1, user2, user3 } from '@/assets';
 
 // Components (unchanged for brevity, but ensure they are responsive)
@@ -171,21 +171,18 @@ function KeshoAngavuPage() {
         )}
       </header>
 
-
-
-
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-8 sm:py-12 md:py-24 lg:py-32 bg-gradient-to-b from-muted/50 to-background">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4 sm:space-y-6">
-                <Badge className="px-2 sm:px-3 py-1 text-xs sm:text-sm" variant="secondary">Empowering Youth</Badge>
+                <Badge className="px-2 sm:px-3 py-1 text-xs sm:text-sm" variant="secondary">Empowering Youth Holistically</Badge>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
-                  Building a Brighter Tomorrow for Tanzanian Youth
+                  Nurturing Skills, Values, and Purpose in Tanzania's Next Generation
                 </h1>
                 <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-[600px]">
-                  Kesho Angavu empowers out-of-school youth through skills training, health education, and economic opportunities to create sustainable futures.
+                  Through targeted training, spiritual growth, health education, and leadership development, we support Tanzanian youth—especially out-of-school individuals—to become responsible, self-reliant, and purpose-driven citizens.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-2">
                   <Button size="default" className="shadow-lg shadow-primary/20 transition-all hover:shadow-primary/40">
@@ -199,15 +196,7 @@ function KeshoAngavuPage() {
               </div>
               {/* Image Section */}
               <div className="flex justify-center mt-6 lg:mt-0">
-                {/* <div className="relative w-full max-w-[90%] sm:max-w-[500px] aspect-[1/1]">
-                  <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-primary to-primary/50 opacity-30 blur-xl"></div>
-                  <img
-                    src="https://via.placeholder.com/550"
-                    alt="Youth Training"
-                    className="relative rounded-xl object-cover w-full h-full shadow-2xl"
-                  />
-                </div> */}
-                <HeroImageSphere/>
+                <HeroImageSphere />
               </div>
             </div>
 
@@ -217,14 +206,14 @@ function KeshoAngavuPage() {
                   <Users className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold">1000+</h3>
-                <p className="text-xs sm:text-sm text-gray-600">Youth Impacted</p>
+                <p className="text-xs sm:text-sm text-gray-600">Lives Transformed</p>
               </div>
               <div className="flex flex-col items-center text-center">
                 <div className="flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-blue-100 mb-2 sm:mb-4">
                   <Building className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold">5+</h3>
-                <p className="text-xs sm:text-sm text-gray-600">Programs Launched</p>
+                <p className="text-xs sm:text-sm text-gray-600">Empowerment Programs</p>
               </div>
               <div className="flex flex-col items-center text-center">
                 <div className="flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-blue-100 mb-2 sm:mb-4">
@@ -250,21 +239,14 @@ function KeshoAngavuPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <Badge variant="outline">About Us</Badge>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
-                Our Mission
+                A Holistic Approach to Youth Empowerment
               </h2>
               <p className="max-w-[900px] text-sm sm:text-base md:text-lg text-gray-600">
-                Kesho Angavu, meaning "Brighter Tomorrow," is an initiative by TUCASA MUHAS to empower out-of-school youth aged 15-24 in Tanzania through skills development, health education, and economic opportunities.
+                Kesho Angavu ("Brighter Tomorrow") is an initiative by TUCASA MUHAS that responds to the pressing needs of out-of-school youth in Tanzania. Through our Youth Center of Excellence, we provide transformative skills, mentorship, and wellness education to empower youth aged 15–24 to overcome poverty, unemployment, and health vulnerabilities.
               </p>
             </div>
+
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-8 sm:py-12 lg:grid-cols-2 lg:gap-12">
-            {/* <div className="relative group w-full aspect-[4/3]">
-              <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-primary to-primary/50 opacity-30 blur-xl group-hover:opacity-40 transition-all"></div>
-              <img
-                src="https://via.placeholder.com/400"
-                alt="Youth Center"
-                className="relative w-full h-full rounded-xl object-cover shadow-xl"
-              />
-            </div> */}
               <AnimatedImageGallery />
 
               <div className="flex flex-col justify-center space-y-6">
@@ -274,36 +256,43 @@ function KeshoAngavuPage() {
                     <TabsTrigger value="mission">Mission</TabsTrigger>
                     <TabsTrigger value="values">Values</TabsTrigger>
                   </TabsList>
+
                   <TabsContent value="vision" className="mt-4 space-y-4">
                     <h3 className="text-lg sm:text-xl font-bold">Our Vision</h3>
                     <p className="text-sm sm:text-base text-gray-600">
-                      To create a future where every out-of-school youth in Tanzania is economically empowered and leads a healthy, fulfilling life.
+                      To build a future where every Tanzanian youth—regardless of background—has the opportunity, skills, and support to lead a productive, healthy, and inspired life.
                     </p>
                   </TabsContent>
+
                   <TabsContent value="mission" className="mt-4 space-y-4">
                     <h3 className="text-lg sm:text-xl font-bold">Our Mission</h3>
                     <p className="text-sm sm:text-base text-gray-600">
-                      To provide training, mentorship, and economic opportunities to out-of-school youth, addressing poverty, unemployment, and health challenges.
+                      We aim to empower out-of-school youth through practical training in entrepreneurship, financial literacy, digital tools, and reproductive health—while fostering personal growth through mentorship, values education, and community outreach.
                     </p>
                   </TabsContent>
+
                   <TabsContent value="values" className="mt-4 space-y-4">
                     <h3 className="text-lg sm:text-xl font-bold">Our Values</h3>
                     <ul className="space-y-2">
                       <li className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5" />
-                        <span className="text-sm sm:text-base text-gray-600">Empowerment: Equipping youth with skills for success</span>
+                        <span className="text-sm sm:text-base text-gray-600">Empowerment: Unlocking potential through hands-on skills and opportunity</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5" />
-                        <span className="text-sm sm:text-base text-gray-600">Inclusion: Equal opportunities for all</span>
+                        <span className="text-sm sm:text-base text-gray-600">Equity: Providing equal access to growth, regardless of gender or background</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5" />
-                        <span className="text-sm sm:text-base text-gray-600">Sustainability: Creating lasting impact</span>
+                        <span className="text-sm sm:text-base text-gray-600">Sustainability: Driving long-term change through income-generating activities</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5" />
-                        <span className="text-sm sm:text-base text-gray-600">Community: Building strong networks</span>
+                        <span className="text-sm sm:text-base text-gray-600">Mentorship: Guiding youth with real-life role models and support networks</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5" />
+                        <span className="text-sm sm:text-base text-gray-600">Wellbeing: Promoting holistic health—mental, physical, and spiritual</span>
                       </li>
                     </ul>
                   </TabsContent>
@@ -313,18 +302,20 @@ function KeshoAngavuPage() {
           </div>
         </section>
 
+
         {/* Programs Section */}
         <section id="services" className="w-full py-8 sm:py-12 md:py-24 lg:py-32 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <Badge variant="outline">Our Programs</Badge>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
-                What We Offer
+                Empowerment Through Action
               </h2>
               <p className="max-w-[900px] text-sm sm:text-base md:text-lg text-gray-600">
-                Comprehensive training and support programs designed to empower out-of-school youth.
+                At Kesho Angavu, we go beyond theory—offering practical, holistic training that helps youth build sustainable livelihoods, lead healthy lives, and become positive agents of change in their communities.
               </p>
             </div>
+
             <div className="mx-auto grid max-w-5xl gap-6 py-8 sm:py-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               <Card className="group hover:border-blue-500 hover:shadow-xl transition-all">
                 <CardHeader className="flex flex-row items-center gap-4">
@@ -335,74 +326,93 @@ function KeshoAngavuPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-xs sm:text-sm text-gray-600">
-                    Skills in poultry, tailoring, agriculture, and bakery to foster self-employment.
+                    From tailoring and poultry keeping to agriculture and baking—youth gain hands-on skills that enable self-reliance and business creation.
                   </p>
                   <Button variant="link" className="mt-4 p-0 h-auto text-xs sm:text-sm">
                     Learn more <ChevronRight className="ml-1 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
+
               <Card className="group hover:border-blue-500 hover:shadow-xl transition-all">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200">
                     <Globe className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
                   </div>
-                  <CardTitle>Financial Skills</CardTitle>
+                  <CardTitle>Financial Literacy</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-xs sm:text-sm text-gray-600">
-                    Training in credit management, savings, and investment for financial independence.
+                    Courses in savings, credit management, and investment planning to foster long-term financial independence and responsibility.
                   </p>
                   <Button variant="link" className="mt-4 p-0 h-auto text-xs sm:text-sm">
                     Learn more <ChevronRight className="ml-1 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
+
               <Card className="group hover:border-blue-500 hover:shadow-xl transition-all">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200">
                     <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
                   </div>
-                  <CardTitle>Digital Skills</CardTitle>
+                  <CardTitle>Digital Empowerment</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-xs sm:text-sm text-gray-600">
-                    Leveraging social media and digital tools for business and education.
+                    Practical IT, social media strategy, and exposure to tech like AI, IoT, and VR—preparing youth for a digital world.
                   </p>
                   <Button variant="link" className="mt-4 p-0 h-auto text-xs sm:text-sm">
                     Learn more <ChevronRight className="ml-1 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
+
               <Card className="group hover:border-blue-500 hover:shadow-xl transition-all">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200">
                     <Award className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
                   </div>
-                  <CardTitle>Health Education</CardTitle>
+                  <CardTitle>Health & Wellness</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-xs sm:text-sm text-gray-600">
-                    Promoting sexual/reproductive health, nutrition, and exercise.
+                    Promoting healthy lifestyles through sexual/reproductive education, nutrition guidance, physical fitness, and mental wellbeing.
                   </p>
                   <Button variant="link" className="mt-4 p-0 h-auto text-xs sm:text-sm">
                     Learn more <ChevronRight className="ml-1 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
+
               <Card className="group hover:border-blue-500 hover:shadow-xl transition-all">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200">
                     <Users className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
                   </div>
-                  <div>
-                    <h3 className="text-base sm:text-lg font-semibold">Infrastructure & Migration</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground">
-                      Services to optimize performance and reduce costs.
-                    </p>
-                  </div>
+                  <CardTitle>Mentorship & Inspiration</CardTitle>
                 </CardHeader>
                 <CardContent>
+                  <p className="text-xs sm:text-sm text-gray-600">
+                    Youth are paired with mentors—including past success stories—to boost confidence, ambition, and life planning.
+                  </p>
+                  <Button variant="link" className="mt-4 p-0 h-auto text-xs sm:text-sm">
+                    Learn more <ChevronRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:border-blue-500 hover:shadow-xl transition-all">
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200">
+                    <Globe className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
+                  </div>
+                  <CardTitle>Community Outreach</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-xs sm:text-sm text-gray-600">
+                    Youth-led health screenings, clean-up campaigns, and awareness events create ripple effects of change in local communities.
+                  </p>
                   <Button variant="link" className="mt-4 p-0 h-auto text-xs sm:text-sm">
                     Learn more <ChevronRight className="ml-1 h-4 w-4" />
                   </Button>
@@ -418,14 +428,14 @@ function KeshoAngavuPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <Badge variant="outline">Our Team</Badge>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
-                Meet Our Leadership
+                Visionaries Behind the Movement
               </h2>
               <p className="max-w-[900px] text-sm sm:text-base md:text-lg text-gray-600">
-                Our dedicated team is passionate about empowering youth and driving change.
+                Kesho Angavu is led by young, passionate changemakers from TUCASA MUHAS who are deeply rooted in the communities they serve. Their leadership reflects the values of resilience, faith, and action that power this initiative.
               </p>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-12">
               <h3 className="text-lg sm:text-xl font-bold mb-6 text-center">Leadership Team</h3>
               <div className="mx-auto grid max-w-5xl gap-8 grid-cols-1 sm:grid-cols-2">
                 <Card className="group overflow-hidden border-0 bg-transparent">
@@ -448,10 +458,11 @@ function KeshoAngavuPage() {
                   </CardHeader>
                   <CardContent className="px-2">
                     <p className="text-xs sm:text-sm text-gray-600">
-                      Daniel leads the Kesho Angavu initiative with vision and commitment to youth empowerment.
+                      As the visionary behind Kesho Angavu, Daniel translates lived experiences into sustainable action. His leadership blends compassion with strategy, guiding the initiative to reach out-of-school youth with life-changing opportunities.
                     </p>
                   </CardContent>
                 </Card>
+
                 <Card className="group overflow-hidden border-0 bg-transparent">
                   <div className="relative aspect-square overflow-hidden rounded-xl w-full">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-4 sm:p-6">
@@ -472,11 +483,17 @@ function KeshoAngavuPage() {
                   </CardHeader>
                   <CardContent className="px-2">
                     <p className="text-xs sm:text-sm text-gray-600">
-                      Ezekiel oversees TUCASA MUHAS, ensuring the organization’s mission aligns with community needs.
+                      Ezekiel anchors the broader mission of TUCASA MUHAS. He plays a crucial role in bridging the academic, spiritual, and community dimensions of the program—ensuring every strategy is grounded in impact.
                     </p>
                   </CardContent>
                 </Card>
               </div>
+            </div>
+
+            <div className="mt-16 text-center">
+              <p className="text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto">
+                Together, this team embodies the spirit of youth-led development. With faith, innovation, and grassroots leadership, they’re reimagining what a brighter tomorrow can look like for Tanzania’s most vulnerable youth.
+              </p>
             </div>
           </div>
         </section>
@@ -487,12 +504,13 @@ function KeshoAngavuPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <Badge variant="outline">Impact Stories</Badge>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
-                What Our Community Says
+                Voices of Transformation
               </h2>
               <p className="max-w-[900px] text-sm sm:text-base md:text-lg text-gray-600">
-                Hear from the youth and community members whose lives have been transformed.
+                Behind every number is a story. These testimonies reflect the courage, growth, and empowerment sparked by Kesho Angavu across communities in Tanzania.
               </p>
             </div>
+
             <div className="mx-auto grid max-w-5xl gap-6 py-8 sm:py-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
               <Card className="bg-white/60 hover:border-blue-200 transition-all">
                 <CardHeader>
@@ -507,7 +525,7 @@ function KeshoAngavuPage() {
                     </div>
                     <div>
                       <CardTitle className="text-base sm:text-lg">Amina</CardTitle>
-                      <CardDescription>Program Participant</CardDescription>
+                      <CardDescription>Tailoring Graduate</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
@@ -515,12 +533,13 @@ function KeshoAngavuPage() {
                   <div className="relative">
                     <div className="absolute -top-2 -left-2 text-4xl text-blue-200">"</div>
                     <p className="text-xs sm:text-sm text-gray-600 pt-4">
-                      The tailoring training gave me skills to start my own business. Now I support my family!
+                      I had dropped out of school and thought my dreams had ended. The tailoring course not only gave me skills, but also hope. I now run my own small shop and teach others in my neighborhood.
                     </p>
                     <div className="absolute -bottom-2 -right-2 text-4xl text-blue-200">"</div>
                   </div>
                 </CardContent>
               </Card>
+
               <Card className="bg-white/60 hover:border-blue-200 transition-all">
                 <CardHeader>
                   <div className="flex items-center gap-4">
@@ -534,7 +553,7 @@ function KeshoAngavuPage() {
                     </div>
                     <div>
                       <CardTitle className="text-base sm:text-lg">Juma</CardTitle>
-                      <CardDescription>Entrepreneur</CardDescription>
+                      <CardDescription>Poultry Farmer</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
@@ -542,12 +561,13 @@ function KeshoAngavuPage() {
                   <div className="relative">
                     <div className="absolute -top-2 -left-2 text-4xl text-blue-200">"</div>
                     <p className="text-xs sm:text-sm text-gray-600 pt-4">
-                      Kesho Angavu’s mentorship helped me grow my poultry business and inspired me to keep going.
+                      The mentorship I received through Kesho Angavu pushed me beyond my fears. Today, I run a poultry business with five employees and I’ve even saved enough to help my younger sister go to school.
                     </p>
                     <div className="absolute -bottom-2 -right-2 text-4xl text-blue-200">"</div>
                   </div>
                 </CardContent>
               </Card>
+
               <Card className="bg-white/60 hover:border-blue-200 transition-all">
                 <CardHeader>
                   <div className="flex items-center gap-4">
@@ -561,7 +581,7 @@ function KeshoAngavuPage() {
                     </div>
                     <div>
                       <CardTitle className="text-base sm:text-lg">Fatuma</CardTitle>
-                      <CardDescription>Community Leader</CardDescription>
+                      <CardDescription>Community Health Volunteer</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
@@ -569,7 +589,7 @@ function KeshoAngavuPage() {
                   <div className="relative">
                     <div className="absolute -top-2 -left-2 text-4xl text-blue-200">"</div>
                     <p className="text-xs sm:text-sm text-gray-600 pt-4">
-                      The health education sessions have reduced stigma and empowered our youth to make better choices.
+                      Through the health outreach sessions, we’ve seen more youth come forward to get tested and talk about reproductive health. The stigma is slowly fading. We’re building a healthier, braver generation.
                     </p>
                     <div className="absolute -bottom-2 -right-2 text-4xl text-blue-200">"</div>
                   </div>
@@ -614,7 +634,7 @@ function KeshoAngavuPage() {
                       <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-blue-100">
                         <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
                       </div>
-                      <p className="text-xs sm:text-sm">tucasamuhas@gmail.com</p>
+                      <p className="text-xs sm:text-sm">info@keshoangavu.org</p>
                     </div>
                   </div>
                 </div>
@@ -631,7 +651,7 @@ function KeshoAngavuPage() {
                   ></iframe>
                 </div>
               </div>
-              <div className="rounded-xl border p-4 sm:p-6 bg-white/60 shadow-lg border-gray-200">
+              {/* <div className="rounded-xl border p-4 sm:p-6 bg-white/60 shadow-lg border-gray-200">
                 <h3 className="text-lg sm:text-xl font-bold mb-4">Send Us a Message</h3>
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -674,7 +694,8 @@ function KeshoAngavuPage() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
-              </div>
+              </div> */}
+              <ContactForm/>
             </div>
           </div>
         </section>
@@ -714,7 +735,7 @@ function KeshoAngavuPage() {
             <div className="space-y-4">
               <h3 className="text-base sm:text-lg font-bold">Connect</h3>
               <ul className="space-y-2">
-                <li><a href="mailto:tucasamuhas@gmail.com" className="text-xs sm:text-sm text-gray-600 hover:text-blue-600">Email Us</a></li>
+                <li><a href="mailto:info@keshoangavu.org" className="text-xs sm:text-sm text-gray-600 hover:text-blue-600">Email Us</a></li>
                 <li><a href="http://tucasamuhas.blogspot.com" className="text-xs sm:text-sm text-gray-600 hover:text-blue-600">Blog</a></li>
               </ul>
             </div>
