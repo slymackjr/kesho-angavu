@@ -1,13 +1,14 @@
-import { useState } from "react";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useState } from 'react';
+import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { AxiosInstance } from '.';
 
 const ContactForm = () => {
   const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    message: ""
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: '',
   });
 
   const [loading, setLoading] = useState(false);
@@ -22,25 +23,19 @@ const ContactForm = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8080/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
+      const response = await AxiosInstance.post('/api/contact', form);
 
-      if (response.ok) {
+      if (response.status === 200) {
         setLoading(false);
         setSent(true);
-        setForm({ firstName: "", lastName: "", email: "", message: "" });
+        setForm({ firstName: '', lastName: '', email: '', message: '' });
       } else {
-        throw new Error("Failed to send message");
+        throw new Error('Failed to send message');
       }
     } catch (error) {
       setLoading(false);
-      console.error("Error:", error);
-      alert("Something went wrong. Please try again later.");
+      console.error('Error:', error);
+      alert('Something went wrong. Please try again later.');
     }
   };
 
@@ -53,7 +48,9 @@ const ContactForm = () => {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <label htmlFor="firstName" className="text-xs sm:text-sm font-medium">First name</label>
+              <label htmlFor="firstName" className="text-xs sm:text-sm font-medium">
+                First name
+              </label>
               <input
                 id="firstName"
                 value={form.firstName}
@@ -64,7 +61,9 @@ const ContactForm = () => {
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="lastName" className="text-xs sm:text-sm font-medium">Last name</label>
+              <label htmlFor="lastName" className="text-xs sm:text-sm font-medium">
+                Last name
+              </label>
               <input
                 id="lastName"
                 value={form.lastName}
@@ -76,7 +75,9 @@ const ContactForm = () => {
             </div>
           </div>
           <div className="space-y-2">
-            <label htmlFor="email" className="text-xs sm:text-sm font-medium">Email</label>
+            <label htmlFor="email" className="text-xs sm:text-sm font-medium">
+              Email
+            </label>
             <input
               id="email"
               type="email"
@@ -88,7 +89,9 @@ const ContactForm = () => {
             />
           </div>
           <div className="space-y-2">
-            <label htmlFor="message" className="text-xs sm:text-sm font-medium">Message</label>
+            <label htmlFor="message" className="text-xs sm:text-sm font-medium">
+              Message
+            </label>
             <textarea
               id="message"
               value={form.message}
@@ -103,7 +106,7 @@ const ContactForm = () => {
             className="w-full bg-blue-600 hover:bg-blue-700 text-sm"
             disabled={loading}
           >
-            {loading ? "Sending..." : "Send Message"}
+            {loading ? 'Sending...' : 'Send Message'}
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </form>
@@ -111,4 +114,5 @@ const ContactForm = () => {
     </div>
   );
 };
+
 export default ContactForm;
